@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import random
 
 
-def scrapeWikiArticle(url):
+def scrape_information(url):
 	response = requests.get(url)
 	
     # Create a BeautifulSoup objet from the HTML
@@ -26,6 +26,6 @@ def scrapeWikiArticle(url):
 		link_to_scrape = link
 		break
 
-	scrapeWikiArticle("https://en.wikipedia.org" + link_to_scrape['href'])
+	scrape_information("https://en.wikipedia.org" + link_to_scrape['href'])
 
-scrapeWikiArticle("https://en.wikipedia.org/wiki/Supply_chain_management")
+scrape_information("https://en.wikipedia.org/wiki/Supply_chain_management")
